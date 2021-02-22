@@ -1,0 +1,1 @@
+## 这是一个用来下载21世纪报的爬虫，将cookie放到cookie.txt内，运行i21-paper-download-pdf即可
