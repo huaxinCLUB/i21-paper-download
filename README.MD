@@ -7,7 +7,7 @@
 > cookie 获取方式，请参考[百度](https://www.baidu.com/s?wd=%E8%8E%B7%E5%8F%96cookie/)
 ## 如果对你有帮助，请我喝杯咖啡吧
 ![](https://github.com/huaxinCLUB/i21-paper-download/blob/master/3in1.png)
-[![欢迎点击打赏](https://gitee.com/huaxinclub/upic/blob/master/uPic/img/3in1.png)](https://gitee.com/huaxinclub/upic/blob/master/uPic/img/3in1.png)
+## [欢迎扫码或点击打赏](https://gitee.com/huaxinclub/upic/blob/master/uPic/img/3in1.png)
 
 ## todo
 - [ ] 下载21世纪报word版
