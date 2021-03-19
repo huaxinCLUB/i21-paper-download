@@ -3,6 +3,7 @@ import requests
 from lxml import etree
 import time
 from datetime import datetime
+import os
 
 
 #获取最新报纸期数
@@ -30,6 +31,17 @@ def get_newest_num(url):
 
 #或去PDF content 并返回
 
+def dl_path():
+	#获取当前工作路径
+	dir = os.getcwd()
+	abs_dir = os.path.join(dir,"/download")
+	if os.path.exists(abs_dir):
+		print('当前路径下/download已存在，正在执行下一步')
+	else:
+		print("当前路径下未发现/download文件夹，正在创建")
+		os.mkdir(abs_dir)
+	return abs_dir
+
 def get_pdf(url,cookie,grade,num):
 	#image_url = "https://paper.i21st.cn/download/21je1_725.pdf"
 	headers ={"User-Agent": "Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1",
@@ -42,7 +54,8 @@ def get_pdf(url,cookie,grade,num):
 	#将文件大小转化成MB单位
 	file_size = int(file_size_str)/1024/1024
 	filename = "21je{}_{}.pdf".format(grade,num)
-	with open(filename,'wb') as f:
+	dl_path_name = os.path.join(dl_path(),filename)
+	with open(dl_path_name,'wb') as f:
 		print("当前正在下载{}".format(filename))
 		count =1
 		for chunk in r.iter_content(chunk_size=2048):
