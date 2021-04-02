@@ -1,7 +1,7 @@
 import requests
 from lxml import etree
 from docx import Document
-
+import os
 
 #获取最新报纸期数
 def get_newest_num(url):
@@ -31,7 +31,7 @@ def get_newest_num(url):
 def dl_path():
     #获取当前工作路径
     dir = os.getcwd()
-    abs_dir = os.path.join(dir,"/download")
+    abs_dir = os.path.join(dir,"./download")
     if os.path.exists(abs_dir):
         print('当前路径下/download已存在，正在执行下一步')
     else:
@@ -123,6 +123,7 @@ if __name__ == '__main__':
 
 
     cookie = get_cookie()
+    dl = dl_path()
     for i in nums:
         url = "https://paper.i21st.cn/index_21je{}_issue_{}.html".format(grade,i)
         document = Document()
@@ -135,7 +136,7 @@ if __name__ == '__main__':
             document.add_heading(title, 0)
             for paragraph in paragraphs:
                 p = document.add_paragraph(paragraph)
-        document.save('21je{}_issue_{}.docx'.format(grade,i))
+        document.save('{}/21je{}_issue_{}.docx'.format(dl,grade,i))
         print("21je{}_issue_{}文件已保存".format(grade,i))
     # url = "https://paper.i21st.cn/story/148824.html"
     # title,paragraphs = get_content(url,cookie)
