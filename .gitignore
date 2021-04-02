@@ -6,3 +6,5 @@ Desktop.ini
 test.py
 *.docx
 cookie.txt
+download/
+download.*
