@@ -53,15 +53,18 @@ def get_cookie():
 if __name__ == '__main__':
     cookie = get_cookie()
     document = Document()
-    url = "https://paper.i21st.cn/index_21je3_issue_656.html"
+    url = "https://paper.i21st.cn/index_21je1_issue_731.html"
     urls = get_article_urls(url,cookie)
     for i in urls:
         story_url = "https://paper.i21st.cn{}".format(i)
-        title,paragraphs = get_content(story_url,cookie)
+        title, paragraphs = get_content(story_url,cookie)
         print("正在访问到{}，请稍后^_^".format(title))
         document.add_heading(title, 0)
         for paragraph in paragraphs:
             p = document.add_paragraph(paragraph)
     document.save('test.docx')
     print("文件已保存")
-
+    # url = "https://paper.i21st.cn/story/148824.html"
+    # title,paragraphs = get_content(url,cookie)
+    
+    # print(paragraphs)
