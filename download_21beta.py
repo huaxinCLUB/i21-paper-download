@@ -31,7 +31,7 @@ def get_newest_num(url):
 def dl_path():
     #获取当前工作路径
     dir = os.getcwd()
-    abs_dir = os.path.join(dir,"./download")
+    abs_dir = os.path.join(dir,"download")
     if os.path.exists(abs_dir):
         print('当前路径下/download已存在，正在执行下一步')
     else:
