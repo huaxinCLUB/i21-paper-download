@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../../Users/cuihuaxin/.designer/images/logo.jpeg</normaloff>../../../../../Users/cuihuaxin/.designer/images/logo.jpeg</iconset>
+    <normaloff>../images/logo.jpeg</normaloff>../images/logo.jpeg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -149,9 +149,6 @@
             <property name="text">
              <string>PDF</string>
             </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
            </widget>
           </item>
           <item>
@@ -221,7 +218,7 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,4,1,2">
+       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,4,1,2,1">
         <item>
          <widget class="QLabel" name="label">
           <property name="font">
@@ -261,17 +258,27 @@
         </item>
         <item>
          <widget class="QProgressBar" name="progressBar">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
           <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="progress">
+          <property name="text">
+           <string>0%</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="margin">
            <number>0</number>
           </property>
-          <property name="textVisible">
-           <bool>true</bool>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+          <property name="indent">
+           <number>-1</number>
           </property>
          </widget>
         </item>
