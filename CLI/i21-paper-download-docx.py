@@ -81,7 +81,7 @@ def get_content(url,cookie):
         return "获取文章内容异常"
 
 def get_cookie():
-	with open("cookie.txt","r") as f:
+	with open("cookie.txt", "r") as f:
 		return f.read()
 
 

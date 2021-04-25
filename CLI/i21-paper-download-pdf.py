@@ -70,7 +70,7 @@ def get_pdf(url,cookie,grade,num):
 
 
 def get_cookie():
-	with open("cookie.txt","r") as f:
+	with open("cookie.txt", "r") as f:
 		return f.read()
 
 if __name__ == '__main__':
